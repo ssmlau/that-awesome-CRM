@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> CRM for CFC </title>
+</head>
+
+<body>
+
+
+  <!--<a href="{{ url_for('static', filename='login.html') }}">Login</a>--->
+  <!--<a href="{{ url_for('login') }}">Login</a>--->
+
+  <h1> INTERACTIONS </h1>
+  <p> Interaction Add Form </p>
+    <form action = "http://localhost:5000/addinteraction" method = "POST">
+      <p>Contact Method <input type = "text" name = "Contact Method" /></p>
+      <p>Comments <input type = "text" name = "Comments" /></p>
+      <p>Consultant IDs <input type = "text" name = "Consultant IDs" /></p>
+      <p>Client ID <input type ="text" name = "Client ID" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+
+</body>
+
+</html>

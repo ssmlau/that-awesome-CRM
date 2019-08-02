@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+   <body>
+      {% if result is defined %}
+         {% for id, val in result.items() %}
+            Interaction ID: {{ id }}
+            <table border = 1>
+               <tr>
+                  <th> Client ID </th>
+                  <td> {{ val["Client ID"] }} </td>
+               </tr>
+               <tr>
+                  <th> Interaction Date </th>
+                  <td> {{ val["Interaction Date"] }} </td>
+               </tr>
+               <tr>
+                  <th> Status </th>
+                  <td> {{ val["Status"] }} </td>
+               </tr>
+               <tr>
+                  <th> Consultant ID </th>
+                  <td> {{ val["Consultant ID"] }} </td>
+               </tr>
+            </table>
+         {% endfor %}
+      {% else %}
+         <h1>{{ "No interactions found for Client ID: " ~ id }}</h1>
+      {% endif %}
+   </body>
+</html>

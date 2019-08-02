@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> CRM for CFC </title>
+</head>
+
+<body>
+
+
+  <!--<a href="{{ url_for('static', filename='login.html') }}">Login</a>--->
+  <!--<a href="{{ url_for('login') }}">Login</a>--->
+  <h1> PROJECTS </h1>
+
+  <p> Project Update Form </p>
+    <form action = "http://localhost:5000/updateproject" method = "POST">
+      <p>Project ID <input type = "text" name = "ID" /></p>
+      <p>Project Name <input type = "text" name = "Name" /></p>
+      <p>Project Status <input type = "text" name = "Status" /></p>
+      <p>Consultant ID <input type = "text" name = "Consultant ID" /></p>
+      <p>Forecasted Project Length <input type ="text" name = "Forecasted Project Length" /></p>
+      <p>Client ID <input type ="text" name = "Client ID" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+
+</body>
+
+</html>

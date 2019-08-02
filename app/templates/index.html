@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> CRM for CFC </title>
+</head>
+
+<body>
+
+
+  <!--<a href="{{ url_for('static', filename='login.html') }}">Login</a>--->
+  <!--<a href="{{ url_for('login') }}">Login</a>--->
+
+  <h1> redirect </h1>
+  <form action = "http://localhost:5000/redirect" method = "POST">
+    <p><input type = "Submit" value = "Submit" /></p>
+  </form>
+
+  <h1> LOGIN </h1>
+  <p> Login </p>
+    <form action = "http://localhost:5000/login" method = "POST">
+      <p>Username <input type = "text" name = "Username" /></p>
+      <p>Password <input type = "text" name = "Password" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+
+
+  <h1> SIGNUP </h1>
+  <p> Signup </p>
+    <form action = "http://localhost:5000/signup" method = "POST">
+      <p>Username <input type = "text" name = "Username" /></p>
+      <p>Password <input type = "text" name = "Password" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+
+
+  <h1> CLIENT </h1>
+  <p> Client Add Form </p>
+    <form action = "http://localhost:5000/addclient" method = "POST">
+      <p>Name <input type = "text" name = "Name" /></p>
+      <p>Cause <input type = "text" name = "Cause" /></p>
+      <p>Client Type <input type = "text" name = "Client Type" /></p>
+      <p>Size <input type ="text" name = "Size" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+
+  <p> Client Update Form </p>
+    <form action = "http://localhost:5000/updateclient" method = "POST">
+      <p>ID <input type = "text" name = "ID" /></p>
+      <p>Name <input type = "text" name = "Name" /></p>
+      <p>Cause <input type = "text" name = "Cause" /></p>
+      <p>Client Type <input type = "text" name = "Client Type" /></p>
+      <p>Size <input type ="text" name = "Size" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+
+  <p> Client Removal Form </p>
+    <form action = "http://localhost:5000/removeclient" method = "POST">
+      <p>ID <input type = "text" name = "ID" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+
+  <p> Client View Info Form </p>
+    <form action = "http://localhost:5000/getclient" method = "POST">
+      <p>ID <input type = "text" name = "ID" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+
+  <h1> INTERACTIONS </h1>
+  <p> Interaction Add Form </p>
+    <form action = "http://localhost:5000/addinteraction" method = "POST">
+      <p>Contact Method <input type = "text" name = "Contact Method" /></p>
+      <p>Comments <input type = "text" name = "Comments" /></p>
+      <p>Consultant IDs <input type = "text" name = "Consultant IDs" /></p>
+      <p>Client ID <input type ="text" name = "Client ID" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+
+  <p> Interaction Update Form </p>
+    <form action = "http://localhost:5000/updateinteraction" method = "POST">
+      <p>Interaction ID <input type = "text" name = "ID" /></p>
+      <p>Contact Method <input type = "text" name = "Contact Method" /></p>
+      <p>Comments <input type = "text" name = "Comments" /></p>
+      <p>Consultant IDs <input type = "text" name = "Consultant IDs" /></p>
+      <p>Client ID <input type ="text" name = "Client ID" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+
+  <p> Interaction Removal Form </p>
+    <form action = "http://localhost:5000/removeinteraction" method = "POST">
+      <p>Interaction ID <input type = "text" name = "ID" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+
+  <p> Interaction View Info Form </p>
+    <form action = "http://localhost:5000/getinteraction" method = "POST">
+      <p>Interaction ID <input type = "text" name = "ID" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+
+  <p> View Interactions by Consultant ID Form </p>
+    <form action = "http://localhost:5000/interactionsbyconsultant" method = "POST">
+      <p>Consultant ID <input type = "text" name = "ID" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+  
+    <p> View Interactions by Client ID Form </p>
+      <form action = "http://localhost:5000/interactionsbyclient" method = "POST">
+        <p>Client ID <input type = "text" name = "ID" /></p>
+        <p><input type = "Submit" value = "Submit" /></p>
+      </form>
+
+  <h1> ISSUES </h1>
+  <p> Issue Add Form </p>
+    <form action = "http://localhost:5000/addissue" method = "POST">
+      <p>Client ID <input type = "text" name = "Client ID" /></p>
+      <p>User ID <input type = "text" name = "User ID" /></p>
+      <p>Description <input type = "text" name = "Description" /></p>
+      <p>Severity <input type ="text" name = "Severity" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+
+  <p> Issue Update Form </p>
+    <form action = "http://localhost:5000/updateissue" method = "POST">
+      <p>Issue ID <input type = "text" name = "ID" /></p>
+      <p>Client ID <input type = "text" name = "Client ID" /></p>
+      <p>User ID <input type = "text" name = "User ID" /></p>
+      <p>Description <input type = "text" name = "Description" /></p>
+      <p>Severity <input type ="text" name = "Severity" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+
+  <p> Issue Removal Form </p>
+    <form action = "http://localhost:5000/removeissue" method = "POST">
+      <p>Issue ID <input type = "text" name = "ID" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+
+  <p> Issue View Info Form </p>
+    <form action = "http://localhost:5000/getissue" method = "POST">
+      <p>Issue ID <input type = "text" name = "ID" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+
+  <p> View Issues by Client ID Form </p>
+    <form action = "http://localhost:5000/issuesbyclient" method = "POST">
+      <p>Client ID <input type = "text" name = "ID" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+
+  <h1> PROJECTS </h1>
+  <p> Project Add Form </p>
+    <form action = "http://localhost:5000/addproject" method = "POST">
+      <p>Project Name <input type = "text" name = "Name" /></p>
+      <p>Project Status <input type = "text" name = "Status" /></p>
+      <p>Consultant IDs <input type = "text" name = "Consultants" /></p>
+      <p>Forecasted Project Length <input type ="text" name = "Forecasted Project Length" /></p>
+      <p>Client ID <input type ="text" name = "Client ID" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+
+  <p> Project Update Form </p>
+    <form action = "http://localhost:5000/updateproject" method = "POST">
+      <p>Project ID <input type = "text" name = "ID" /></p>
+      <p>Project Name <input type = "text" name = "Name" /></p>
+      <p>Project Status <input type = "text" name = "Status" /></p>
+      <p>Consultant IDs <input type = "text" name = "Consultants" /></p>
+      <p>Forecasted Project Length <input type ="text" name = "Forecasted Project Length" /></p>
+      <p>Client ID <input type ="text" name = "Client ID" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+
+  <p> Project Removal Form </p>
+    <form action = "http://localhost:5000/removeproject" method = "POST">
+      <p>Project ID <input type = "text" name = "ID" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+
+  <p> Project View Info Form </p>
+    <form action = "http://localhost:5000/getproject" method = "POST">
+      <p>Project ID <input type = "text" name = "ID" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+  
+  <p> View Projects by Consultant ID Form </p>
+    <form action = "http://localhost:5000/projectsbyconsultant" method = "POST">
+      <p>Consultant ID <input type = "text" name = "ID" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+  
+    <p> View Projects by Client ID Form </p>
+      <form action = "http://localhost:5000/projectsbyclient" method = "POST">
+        <p>Client ID <input type = "text" name = "ID" /></p>
+        <p><input type = "Submit" value = "Submit" /></p>
+      </form>
+</body>
+
+</html>

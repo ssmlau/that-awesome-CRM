@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+   <body>
+      {% if result is defined %}
+         {% for id, val in result.items() %}
+            Issue ID: {{ id }}
+            <table border = 1>
+               <tr>
+                  <th> Client ID </th>
+                  <td> {{ val["Client ID"] }} </td>
+               </tr>
+               <tr>
+                  <th> Issue Type </th>
+                  <td> {{ val["Issue Type"] }} </td>
+               </tr>
+               <tr>
+                  <th> Priority </th>
+                  <td> {{ val["Priority"] }} </td>
+               </tr>
+               <tr>
+                  <th> Status </th>
+                  <td> {{ val["Status"] }} </td>
+               </tr>
+               <tr>
+                  <th> Issue Date </th>
+                  <td> {{ val["Issue Date"] }} </td>
+               </tr>
+            </table>
+         {% endfor %}
+      {% else %}
+         <h1>{{ "No issues found for Client ID: " ~ id }}</h1>
+      {% endif %}
+   </body>
+</html>

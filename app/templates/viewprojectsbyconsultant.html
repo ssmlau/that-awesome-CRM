@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+   <body>
+      {% if result is defined %}
+         {% for id, val in result.items() %}
+            Project ID: {{ id }}
+            <table border = 1>
+               <tr>
+                  <th> Consultant ID </th>
+                  <td> {{ val["Consultant ID"] }} </td>
+               </tr>
+               <tr>
+                  <th> Name </th>
+                  <td> {{ val["Name"] }} </td>
+               </tr>
+               <tr>
+                  <th> Status </th>
+                  <td> {{ val["Status"] }} </td>
+               </tr>
+               <tr>
+                  <th> Forecasted Project Length </th>
+                  <td> {{ val["Forecasted Project Length"] }} </td>
+               </tr>
+               <tr>
+                  <th> Client ID </th>
+                  <td> {{ val["Client ID"] }} </td>
+               </tr>
+            </table>
+         {% endfor %}
+      {% else %}
+         <h1>{{ "No projects found for Consultant ID: " ~ id }}</h1>
+      {% endif %}
+   </body>
+</html>

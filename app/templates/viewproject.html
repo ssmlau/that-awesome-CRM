@@ -1,0 +1,27 @@
+<!doctype html>
+<!-- both view project details and allows for updates -->
+<html>
+   <body>
+       View/Update Project information: (Placeholder template)
+       <form action = "http://localhost:5000/updateproject" method = "POST">
+         <input type="hidden" name="ID" value= {{ id }}>
+         <table>
+            {% for key, value in result.items() %}
+            {% if key is ne "ID" %}
+            <tr>
+               <th> {{ key ~ ":" }} </th>
+               <td>
+                  <input type = "text" name = "{{ key }}" value = "{{ value }}" />
+               </td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+            <tr>
+               <td colspan="2">
+                  <input type = "Submit" value = "Update" />
+               </td>
+            </tr>
+         </table>
+       </form>
+   </body>
+</html>

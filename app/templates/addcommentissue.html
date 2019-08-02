@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> CRM for CFC </title>
+</head>
+
+<body>
+
+
+  <!--<a href="{{ url_for('static', filename='login.html') }}">Login</a>--->
+  <!--<a href="{{ url_for('login') }}">Login</a>--->
+  <h1> Comments </h1>
+
+  <p> Add Comment to Issue Form </p>
+    <form action = "http://localhost:5000/addcommentissue" method = "POST">
+      <p>Issue ID <input type = "text" name = "ID" /></p>
+      <p>Comment <input type = "text" name = "Comment" /></p>
+      <p><input type = "Submit" value = "Submit" /></p>
+    </form>
+
+</body>
+
+</html>
